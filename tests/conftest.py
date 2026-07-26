@@ -28,11 +28,11 @@ def pytest_runtest_makereport(item, call):
             os.makedirs(screenshots_dir, exist_ok=True)
             screenshot_path = os.path.join(screenshots_dir, f"{item.name}_FAILED.png")
             
-            # 1. Save screenshot file on disk
+            #Save screenshot file on disk
             page.screenshot(path=screenshot_path)
             logger.error(f"Test FAILED! Screenshot saved: {screenshot_path}")
 
-            # screenshot into HTML Report
+            #screenshot into HTML Report
             if pytest_html:
                 html_media = f'<div><img src="{screenshot_path}" alt="screenshot" style="width:600px;height:300px;" ' \
                              f'onclick="window.open(this.src)" align="right"/></div>'

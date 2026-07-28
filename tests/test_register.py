@@ -13,7 +13,7 @@ class TestRegisterPage:
         register_page.fill_registration_form(
             first_name="John",
             last_name="Doe",
-            username="johndoe123",
+            username="jhndoe123o",
             password="Password@123"
         )
         ui_page.wait_for_timeout(5000)

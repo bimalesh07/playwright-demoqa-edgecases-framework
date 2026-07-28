@@ -9,6 +9,7 @@ def ui_page(page):
     logger.info("Opening Browser Tab Context")
     base_url = "https://demoqa.com/"
     page.goto(base_url, wait_until="load")
+    
     yield page
     logger.info("Closing Browser Page")
 
